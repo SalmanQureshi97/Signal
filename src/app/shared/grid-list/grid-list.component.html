@@ -1,0 +1,52 @@
+<ion-card-header style="height: 30px">
+  <ion-row>
+    <ion-col size="8">
+      <strong style="font-size: larger">{{ Title }} </strong></ion-col
+    ><ion-col>
+      <strong style="font-weight: light; float: right; color: midnightblue"
+        >See More</strong
+      ></ion-col
+    >
+  </ion-row>
+</ion-card-header>
+<ion-slides [options]="slideOpts">
+  <ion-slide *ngFor="let item of itemList">
+    <ion-card routerLink="{{ item.title }}" style="height: 150px">
+      <ion-card-header>
+        <ion-row class="ion-align-items-center">
+          <ion-avatar style="align-content: flex-start; height: 35px">
+            <img src="{{ item.img }}" />
+          </ion-avatar>
+          <ion-col>
+            <div id="trend">
+              <!-- <apx-chart
+                [series]="chartOptions.series"
+                [chart]="chartOptions.chart"
+                [xaxis]="chartOptions.xaxis"
+                [grid]="chartOptions.grid"
+                [stroke]="chartOptions.stroke"
+              ></apx-chart> -->
+              <ion-icon
+                [style.color]="color(Title)"
+                size="large"
+                [name]="arrow(Title)"
+              ></ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-row class="ion-align-items-center">
+          <strong>{{ item.title }}</strong>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <p>{{ item.mCap }}</p>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <p>{{ item.latestPrice }}</p>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </ion-slide>
+</ion-slides>

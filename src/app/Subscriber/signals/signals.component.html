@@ -1,0 +1,27 @@
+<ion-header translucent="true" collapse="fade">
+  <ion-toolbar style="padding-top: 10px">
+    <ion-buttons slot="start">
+      <ion-button *ngIf="!showSearchbar" (click)="back()">
+        <span *ngIf="!ios">
+          <ion-icon name="caret-back-outline"></ion-icon>
+        </span>
+      </ion-button>
+    </ion-buttons>
+    <div><ion-searchbar></ion-searchbar></div>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="container">
+    <app-grid-list
+      [Title]="Title"
+      [itemList]="items"
+      [gainers]="true"
+    ></app-grid-list>
+    <app-grid-list [Title]="Title_" [itemList]="items"></app-grid-list>
+  </div>
+
+  <div>
+    <h1 style="margin-left: 20px">Most Subscribed</h1>
+    <app-grid-item></app-grid-item>
+  </div>
+</ion-content>

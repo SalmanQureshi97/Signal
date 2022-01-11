@@ -1,0 +1,48 @@
+<ion-grid class="chat" style="background-color: white" [style.height]="height">
+  <ion-row
+    hidden
+    style="background-color: black; width: 100%; height: 80px"
+  ></ion-row>
+  <ion-list>
+    <ion-item *ngFor="let item of messageList">
+      <ion-avatar slot="start">
+        <img src="../../../../assets/images/user.png" />
+      </ion-avatar>
+      <ion-chip style="height: fit-content; width: 90%">
+        <ion-label text-wrap>
+          <h2>Finn</h2>
+          <h3>
+            I'm a big deal Lorem, ipsum dolor sit amet consectetur adipisicing
+            elit. Nihil quisquam ab, aperiam dignissimos aspernatur doloribus,
+            illum ea quam vel veniam explicabo molestiae a! Et ullam similique
+            deleniti. Tempora, ullam animi?
+          </h3>
+
+          <p style="text-align: end">2:30pm</p>
+        </ion-label>
+      </ion-chip>
+    </ion-item>
+  </ion-list>
+</ion-grid>
+
+<ion-grid
+  class="chat"
+  style="width: 100%; background-color: white; position: fixed"
+  [style.height]="textHeight"
+>
+  <ion-row>
+    <ion-col size="2">
+      <ion-button color="light">
+        <ion-icon name="attach-outline"></ion-icon></ion-button
+    ></ion-col>
+    <ion-col class="inputer" size="8"
+      ><ion-chip style="text-align: start">
+        <ion-input placeholder="Message"></ion-input>
+        <ion-icon name="arrow-up-circle-outline"></ion-icon></ion-chip
+    ></ion-col>
+    <ion-col size="2">
+      <ion-button color="light">
+        <ion-icon name="mic-outline"></ion-icon></ion-button
+    ></ion-col>
+  </ion-row>
+</ion-grid>

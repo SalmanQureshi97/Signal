@@ -1,0 +1,45 @@
+<ion-header translucent="true" collapse="fade">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <span>
+          <ion-icon name="caret-back-outline"></ion-icon>
+        </span>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Group Name</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="text-align: center">
+  <mat-tab-group
+    style="background-color: darkgrey"
+    mat-align-tabs="center"
+    disablePagination="true"
+    disableRipple="true"
+  >
+    <ion-row>
+      <ion-col>
+        <mat-tab label="Chat">
+          <ng-template matTabContent>
+            <app-chat></app-chat>
+          </ng-template>
+        </mat-tab>
+      </ion-col>
+      <ion-col>
+        <mat-tab label="Timeline">
+          <ng-template matTabContent>
+            <app-timeline></app-timeline>
+          </ng-template>
+        </mat-tab>
+      </ion-col>
+      <ion-col>
+        <mat-tab label="Signals">
+          <ng-template matTabContent
+            ><app-signal-list></app-signal-list>
+          </ng-template>
+        </mat-tab>
+      </ion-col>
+    </ion-row>
+  </mat-tab-group>
+</ion-content>

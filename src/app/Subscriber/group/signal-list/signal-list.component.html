@@ -1,0 +1,16 @@
+<app-simple-chart Title="Ethereum"></app-simple-chart>
+<ion-grid [style.height]="height">
+  <ion-list>
+    <ion-item
+      ><app-signal-box expired="false" buy="2"></app-signal-box>
+    </ion-item>
+
+    <ion-item><app-signal-box buy="1"></app-signal-box> </ion-item>
+
+    <ion-item
+      ><app-signal-box expired="true" buy="1"></app-signal-box>
+    </ion-item>
+    <ion-item><app-signal-box buy="2"></app-signal-box> </ion-item>
+    <ion-item><app-signal-box buy="2"></app-signal-box> </ion-item>
+  </ion-list>
+</ion-grid>

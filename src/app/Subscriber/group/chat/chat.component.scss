@@ -1,0 +1,13 @@
+.chat {
+  overflow: hidden;
+  overflow-y: scroll;
+  .message {
+    margin: 10px;
+    background-color: yellow;
+  }
+}
+
+.inputer {
+  margin: auto;
+  width: 50%;
+}

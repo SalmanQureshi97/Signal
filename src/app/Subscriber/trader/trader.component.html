@@ -1,0 +1,270 @@
+<ion-content class="speaker-detail">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/app/tabs/speakers"></ion-back-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button (click)="openContact(speaker)">
+          <ion-icon
+            slot="icon-only"
+            ios="person-add-outline"
+            md="person-add-outline"
+          ></ion-icon>
+        </ion-button>
+        <ion-button (click)="openSpeakerShare(speaker)">
+          <ion-icon
+            slot="icon-only"
+            ios="share-outline"
+            md="share-sharp"
+          ></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="speaker-background">
+    <img
+      src="https://yt3.ggpht.com/Q-hoh4q7zx9UFyxLljoDCpjxh1Pz9ntJPIZKS8HRuS8r__XGchCefH7cWMb19VqrZoV2koY4Qg=s900-c-k-c0x00ffffff-no-rj"
+      [alt]="speaker?.name"
+    />
+    <h2>Benjamin Cowen</h2>
+  </div>
+
+  <div class="ion-padding speaker-detail">
+    <ion-grid>
+      <ion-row>
+        <ion-col style="text-align: center">
+          <p style="font-weight: 900">Subscribers</p>
+          <ion-chip>
+            <ion-label>67.2K</ion-label>
+          </ion-chip>
+        </ion-col>
+        <ion-col style="text-align: center">
+          <p style="font-weight: 900">Rank</p>
+          <ion-chip>
+            <ion-icon name="arrow-up-outline" color="success"></ion-icon>
+            <ion-label style="font-weight: 700">2</ion-label>
+          </ion-chip></ion-col
+        >
+        <ion-col style="text-align: center">
+          <p style="font-weight: 900">Trades</p>
+          <ion-chip>
+            <ion-label>6</ion-label>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+      <br />
+    </ion-grid>
+    <ion-grid fixed>
+      <ion-list-header> Posts </ion-list-header>
+      <ion-row>
+        <ion-col size="12" size-md="6">
+          <ion-card class="speaker-card">
+            <ion-card-header>
+              <ion-item detail="false" lines="none" class="speaker-item">
+                <ion-avatar slot="start">
+                  <img
+                    src="https://yt3.ggpht.com/Q-hoh4q7zx9UFyxLljoDCpjxh1Pz9ntJPIZKS8HRuS8r__XGchCefH7cWMb19VqrZoV2koY4Qg=s900-c-k-c0x00ffffff-no-rj"
+                    [alt]="speaker?.name"
+                  />
+                </ion-avatar>
+                <ion-label>
+                  <h2>Benjamin Cowen</h2>
+                  <p>
+                    <ion-row
+                      ><ion-icon name="eye-outline"></ion-icon>
+                      <ion-label>6.7k</ion-label></ion-row
+                    >
+                  </p>
+                </ion-label>
+              </ion-item>
+            </ion-card-header>
+
+            <ion-card-content>
+              <img src="../../../assets/images/news.jpg" />
+              <ion-list lines="none">
+                <ion-item detail="true">
+                  <ion-label>
+                    <h3>
+                      Random Text Regarding the post can be anything honestly
+                      lol lmao
+                    </h3>
+                  </ion-label>
+                </ion-item>
+              </ion-list>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12" size-md="6">
+          <ion-card class="speaker-card">
+            <ion-card-header>
+              <ion-item detail="false" lines="none" class="speaker-item">
+                <ion-avatar slot="start">
+                  <img
+                    src="https://yt3.ggpht.com/Q-hoh4q7zx9UFyxLljoDCpjxh1Pz9ntJPIZKS8HRuS8r__XGchCefH7cWMb19VqrZoV2koY4Qg=s900-c-k-c0x00ffffff-no-rj"
+                  />
+                </ion-avatar>
+                <ion-label>
+                  <h2>Benjamin Cowen</h2>
+                  <p>
+                    <ion-row
+                      ><ion-icon name="eye-outline"></ion-icon>
+                      <ion-label>6.7k</ion-label></ion-row
+                    >
+                  </p>
+                </ion-label>
+              </ion-item>
+            </ion-card-header>
+
+            <ion-card-content>
+              <img src="../../../assets/images/news.jpg" />
+              <ion-list lines="none">
+                <ion-item detail="true">
+                  <ion-label>
+                    <h3>
+                      Random Text Regarding the post can be anything honestly
+                      lol lmao
+                    </h3>
+                  </ion-label>
+                </ion-item>
+              </ion-list>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12" size-md="6">
+          <ion-card class="speaker-card">
+            <ion-card-header>
+              <ion-item detail="false" lines="none" class="speaker-item">
+                <ion-avatar slot="start">
+                  <img
+                    src="https://yt3.ggpht.com/Q-hoh4q7zx9UFyxLljoDCpjxh1Pz9ntJPIZKS8HRuS8r__XGchCefH7cWMb19VqrZoV2koY4Qg=s900-c-k-c0x00ffffff-no-rj"
+                    [alt]="speaker?.name"
+                  />
+                </ion-avatar>
+                <ion-label>
+                  <h2>Benjamin Cowen</h2>
+                  <p>
+                    <ion-row
+                      ><ion-icon name="eye-outline"></ion-icon>
+                      <ion-label>6.7k</ion-label></ion-row
+                    >
+                  </p>
+                </ion-label>
+              </ion-item>
+            </ion-card-header>
+
+            <ion-card-content>
+              <img src="../../../assets/images/news.jpg" />
+              <ion-list lines="none">
+                <ion-item detail="true">
+                  <ion-label>
+                    <h3>
+                      Random Text Regarding the post can be anything honestly
+                      lol lmao
+                    </h3>
+                  </ion-label>
+                </ion-item>
+              </ion-list>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div>
+      <ion-list>
+        <ion-list-header> Signal Groups </ion-list-header>
+
+        <ion-item-sliding>
+          <ion-item>
+            <ion-icon slot="end" name="ada"></ion-icon>
+            <ion-label>Cardano (Ada Den)</ion-label>
+          </ion-item>
+
+          <ion-item-options side="start">
+            <ion-item-option color="primary">Subscribe</ion-item-option>
+          </ion-item-options>
+
+          <ion-item-options side="end">
+            <ion-item-option color="success">Invest</ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+
+        <ion-item-sliding>
+          <ion-item>
+            <ion-icon slot="end" name="eth"></ion-icon>
+            <ion-label>Ethereum</ion-label>
+          </ion-item>
+
+          <ion-item-options side="start">
+            <ion-item-option color="success">Subscribe</ion-item-option>
+          </ion-item-options>
+
+          <ion-item-options side="end">
+            <ion-item-option color="success">Invest</ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+
+        <ion-item-sliding>
+          <ion-item>
+            <ion-icon slot="end" name="btc"></ion-icon>
+            <ion-label>Bitcoin</ion-label>
+          </ion-item>
+
+          <ion-item-options side="start">
+            <ion-item-option color="primary">Subscribe</ion-item-option>
+          </ion-item-options>
+
+          <ion-item-options side="end">
+            <ion-item-option color="success">Invest</ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+
+        <ion-item-sliding>
+          <ion-item>
+            <ion-icon slot="end" name="trx"></ion-icon>
+            <ion-label>Thor</ion-label>
+          </ion-item>
+
+          <ion-item-options side="start">
+            <ion-item-option color="primary">Subscribe</ion-item-option>
+          </ion-item-options>
+
+          <ion-item-options side="end">
+            <ion-item-option color="success">Invest</ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+    </div>
+
+    <hr />
+
+    <ion-chip
+      color="twitter"
+      button
+      (click)="openExternalUrl('https://twitter.com/' + speaker.twitter)"
+    >
+      <ion-icon name="logo-twitter"></ion-icon>
+      <ion-label>Twitter</ion-label>
+    </ion-chip>
+
+    <ion-chip
+      color="dark"
+      button
+      (click)="openExternalUrl('https://github.com/ionic-team/ionic')"
+    >
+      <ion-icon name="logo-github"></ion-icon>
+      <ion-label>GitHub</ion-label>
+    </ion-chip>
+
+    <ion-chip
+      color="instagram"
+      button
+      (click)="openExternalUrl('https://instagram.com/ionicframework')"
+    >
+      <ion-icon name="logo-instagram"></ion-icon>
+      <ion-label>Instagram</ion-label>
+    </ion-chip>
+  </div>
+</ion-content>

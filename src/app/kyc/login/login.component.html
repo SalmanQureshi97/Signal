@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar hidden color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Main</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form id="container" [formGroup]="signInForm" (ngSubmit)="submitSignInForm()">
+    <div formGroupName="user">
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input
+          id="email"
+          autocapitalize="on"
+          type="email"
+          formControlName="email"
+          required
+        >
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input
+          id="password"
+          type="password"
+          formControlName="password"
+          required
+        >
+        </ion-input>
+      </ion-item>
+    </div>
+    <ion-grid>
+      <ion-button
+        routerLink="/home"
+        expand="block"
+        type="submit"
+        [disabled]="!signInForm.valid"
+      >
+        <strong>Log in</strong>
+      </ion-button>
+      <p>
+        <a [routerLink]="['/register']">Or new user? Create an account</a>
+      </p>
+    </ion-grid>
+  </form>
+</ion-content>

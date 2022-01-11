@@ -1,0 +1,39 @@
+<ion-card
+  [disabled]="expired"
+  button
+  [color]="buy == 1 ? buyColor : sellColor"
+  style="width: 100%"
+>
+  <ion-card-header>
+    <ion-row>
+      <ion-col>
+        <ion-card-subtitle>{{ signalType }}</ion-card-subtitle>
+        <ion-card-title>1.23 USD</ion-card-title>
+      </ion-col>
+      <ion-col style="text-align: center"
+        ><ion-icon
+          style="width: 60px; height: 60px; top: 50%; left: 50%"
+          name="ada"
+        ></ion-icon
+      ></ion-col>
+    </ion-row>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card-subtitle>Current Price</ion-card-subtitle>
+        <ion-card-title>1.31 USD</ion-card-title>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button style="height: 100%" color="light">
+          <ion-icon name="checkmark-outline"></ion-icon
+        ></ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button style="height: 100%" color="light">
+          <ion-icon name="close-outline"></ion-icon></ion-button
+      ></ion-col>
+    </ion-row>
+  </ion-card-content>
+</ion-card>

@@ -1,22 +1,35 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { NavigatorComponent } from './navigator/navigator.component';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'kyc',
+    loadChildren: () => import('./kyc/kyc.module').then((m) => m.KycModule),
+  },
+
+  {
+    path: 'subscriber',
+    loadChildren: () =>
+      import('./Subscriber/subscriber.module').then((m) => m.SubscriberModule),
   },
   {
+    path: 'trader',
+    loadChildren: () =>
+      import('./Trader/trader.module').then((m) => m.TraderModule),
+  },
+
+  {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
+    component: NavigatorComponent,
   },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

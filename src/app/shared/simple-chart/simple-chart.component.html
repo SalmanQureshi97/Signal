@@ -1,0 +1,33 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>{{ Title }}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <div id="chart">
+      <apx-chart
+        *ngIf="!loading"
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [xaxis]="chartOptions.xaxis"
+        [yaxis]="chartOptions.yaxis"
+      ></apx-chart>
+    </div>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button size="small">1D</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button size="small">1W</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button size="small">1M</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button size="small">ALL</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>
